@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Denah Rasa - Platform rekomendasi kuliner pintar Indonesia dengan asisten AI KawanKuliner untuk menemukan tempat makan, kafe hits, dan warung legendaris."/>
+  <title>Denah Rasa - Peta & Rekomendasi Kuliner Cerdas Nusantara</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand-logo">
+        <span class="logo-icon">🍽️</span>
+        <span class="logo-text">Denah<span>Rasa</span></span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#hero">Beranda</a>
+        <a href="#kategori">Kategori</a>
+        <a href="#keunggulan">Keunggulan</a>
+        <a href="#cara-kerja">Cara Kerja</a>
+      </nav>
+
+      <div class="nav-action">
+        <button id="nav-chat-btn" class="btn btn-primary btn-sm">
+          <span class="btn-icon">💬</span> Tanya KawanKuliner
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-glow-bg"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>Asisten Kuliner AI Pertama di Indonesia</span>
+        </div>
+        
+        <h1 class="hero-title">
+          Jelajahi Cita Rasa <span class="gradient-text">Nusantara</span> Tanpa Bingung Mau Makan Apa
+        </h1>
+        
+        <p class="hero-desc">
+          Temukan surga kuliner tersembunyi, kafe aesthetic, warung legendaris, hingga jajanan viral di sekitarmu dengan rekomendasi instan dan akurat dari <strong>KawanKuliner AI</strong>.
+        </p>
+
+        <!-- Quick Ask Search Bar -->
+        <div class="hero-search-wrapper">
+          <div class="search-input-group">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="hero-quick-input" placeholder="Contoh: Rekomendasi sate maranggi enak di Bandung..." />
+            <button id="hero-search-btn" class="btn btn-primary">
+              <span>Tanya AI</span> 🚀
+            </button>
+          </div>
+
+          <div class="quick-tags">
+            <span class="tag-label">Coba tanyakan:</span>
+            <button class="quick-chip" data-query="Rekomendasi kafe aesthetic & nyaman buat kerja di Jakarta Selatan">☕ Kafe WFC Jaksel</button>
+            <button class="quick-chip" data-query="Rekomendasi bakso enak & viral di Bandung">🍜 Bakso Enak Bandung</button>
+            <button class="quick-chip" data-query="Kuliner malam legendaris di Yogyakarta">🌶️ Kuliner Malam Jogja</button>
+            <button class="quick-chip" data-query="Tempat makan seafood murah dan fresh di Surabaya">🦀 Seafood Surabaya</button>
+          </div>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">5.000+</span>
+            <span class="stat-label">Spot Kuliner Terkurasi</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Bahasa Indonesia Kasual</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">Asisten AI Siap Rekomendasi</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Card -->
+      <div class="hero-visual">
+        <div class="visual-card main-card">
+          <div class="card-header-badge">
+            <span class="status-live"></span> Paling Dicari Hari Ini
+          </div>
+          <div class="culinary-preview">
+            <div class="culinary-img-placeholder">
+              <span class="food-emoji">🍲</span>
+              <div class="food-info">
+                <h3>Soto Betawi H. Husein</h3>
+                <p>📍 Manggarai, Jakarta Selatan</p>
+              </div>
+            </div>
+            <div class="culinary-meta">
+              <div class="meta-tag price">💰 Rp 35.000 - Rp 50.000</div>
+              <div class="meta-tag rating">⭐ 4.8 (2.4k ulasan)</div>
+            </div>
+            <div class="ai-recommendation-bubble">
+              <div class="ai-avatar">🤖</div>
+              <p><strong>KawanKuliner:</strong> "Kuah santan gurih berpadu potongan daging empuk! Wajib coba daging oseng kuah pisahnya."</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating mini cards -->
+        <div class="floating-badge badge-top-right">
+          <span class="badge-emoji">📍</span>
+          <div>
+            <strong>Peta & Rute Akurat</strong>
+            <small>Langsung ke Google Maps</small>
+          </div>
+        </div>
+
+        <div class="floating-badge badge-bottom-left">
+          <span class="badge-emoji">💡</span>
+          <div>
+            <strong>Rekomendasi Sesuai Budget</strong>
+            <small>Dari Rp 10rb - Resto Bintang</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section id="kategori" class="section categories-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Kategori Favorit</span>
+        <h2 class="section-title">Eksplorasi Sesuai Selera Lidahmu</h2>
+        <p class="section-subtitle">Pilih suasana atau jenis kuliner yang sedang kamu inginkan hari ini.</p>
+      </div>
+
+      <div class="categories-grid">
+        <div class="category-card" data-prompt="Rekomendasi warung makan & street food legendaris paling enak">
+          <div class="cat-icon">🍢</div>
+          <h3>Street Food & Warung</h3>
+          <p>Kuliner jalanan legendaris, angkringan, sate, bakso, dan kuliner malam hemat rasa bintang lima.</p>
+          <span class="cat-action">Tanya Tempat ➔</span>
+        </div>
+
+        <div class="category-card" data-prompt="Rekomendasi kafe aesthetic, cozy, dan nyaman untuk nongkrong atau nugas">
+          <div class="cat-icon">☕</div>
+          <h3>Kafe & Coffee Shop</h3>
+          <p>Tempat nongkrong aesthetic, spot foto Instagramable, dan coffee shop ramah laptop (WFC).</p>
+          <span class="cat-action">Tanya Tempat ➔</span>
+        </div>
+
+        <div class="category-card" data-prompt="Rekomendasi restoran keluarga dan masakan khas tradisional nusantara">
+          <div class="cat-icon">🍛</div>
+          <h3>Tradisional Nusantara</h3>
+          <p>Kekayaan resep autentik dari Sabang sampai Merauke, resto keluarga, dan rumah makan padang top.</p>
+          <span class="cat-action">Tanya Tempat ➔</span>
+        </div>
+
+        <div class="category-card" data-prompt="Rekomendasi dessert manis, roti, gelato, dan pastry hits">
+          <div class="cat-icon">🍰</div>
+          <h3>Dessert & Manisan</h3>
+          <p>Martabak manis premium, es krim gelato lokal, cake shop lembut, dan jajanan pasar manis.</p>
+          <span class="cat-action">Tanya Tempat ➔</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="keunggulan" class="section features-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Kenapa Denah Rasa?</span>
+        <h2 class="section-title">Fitur Pintar untuk Pecinta Kuliner</h2>
+        <p class="section-subtitle">Dibuat khusus untuk memberikan rekomendasi kuliner yang relevan, cepat, dan terpercaya.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-box">
+          <div class="feature-icon">🧠</div>
+          <h3>Didukung AI Gemini</h3>
+          <p>Memahami preferensi rasa, pantangan makanan, suasana tempat, hingga batas budget yang kamu tentukan.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">📍</div>
+          <h3>Tautan Lokasi & Peta Asli</h3>
+          <p>Setiap rekomendasi dilengkapi rincian nama tempat dan link petunjuk arah ke Google Maps agar kamu tidak tersesat.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">💾</div>
+          <h3>Riwayat Chat Tersimpan</h3>
+          <p>Sesi percakapan tersimpan otomatis di browsermu sehingga kamu bisa melihat kembali daftar tempat kapan saja.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon">🇮🇩</div>
+          <h3>Bahasa Santai & Ramah</h3>
+          <p>Interaksi santai layaknya berdiskusi dengan teman food-vlogger yang hafal semua spot kuliner terenak.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="cara-kerja" class="section steps-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Cara Kerja</span>
+        <h2 class="section-title">3 Langkah Menemukan Makanan Impian</h2>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <h3>Ketik Keinginanmu</h3>
+          <p>Tulis makanan yang kamu idamkan, kota/daerah tujuan, atau suasana tempat yang kamu inginkan.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <h3>KawanKuliner Menganalisis</h3>
+          <p>AI memilah ribuan data kuliner terbaik dan menyusun rekomendasi lengkap beserta estimasi harga.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <h3>Kunjungi & Nikmati</h3>
+          <p>Dapatkan nama tempat, menu signature yang wajib dipesan, dan rute navigasi langsung ke lokasi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Banner -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-content">
+          <h2>Perut Lapar Tapi Bingung Mau Makan Apa?</h2>
+          <p>Klik tombol di bawah dan biarkan KawanKuliner memberikan rekomendasi terbaik untukmu sekarang juga!</p>
+          <button id="cta-open-chat" class="btn btn-light btn-lg">
+            <span>💬 Buka KawanKuliner Sekarang</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="#" class="brand-logo">
+          <span class="logo-icon">🍽️</span>
+          <span class="logo-text">Denah<span>Rasa</span></span>
+        </a>
+        <p>Peta Cita Rasa & Asisten Rekomendasi Kuliner Cerdas Nusantara.</p>
+      </div>
+      <div class="footer-copy">
+        <p>&copy; 2026 Denah Rasa • Powered by Google Gemini AI</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================ -->
+  <!-- FLOATING CHATBOT WIDGET: KAWANKULINER                        -->
+  <!-- ============================================================ -->
+
+  <!-- Floating Trigger Button (FAB) -->
+  <div id="chat-fab-container" class="chat-fab-container">
+    <div class="fab-tooltip">Tanya Rekomendasi Kuliner! 🍲</div>
+    <button id="chat-fab-toggle" class="chat-fab-btn" aria-label="Buka Chat KawanKuliner">
+      <span class="fab-icon-open">💬</span>
+      <span class="fab-icon-close">✕</span>
+      <span class="fab-badge-pulse"></span>
+    </button>
+  </div>
+
+  <!-- Floating Chat Window Modal -->
+  <div id="chat-widget-window" class="chat-widget-window" aria-hidden="true">
+    <!-- Chat Widget Header -->
+    <div class="widget-header">
+      <div class="widget-profile">
+        <div class="avatar-wrapper">
+          <span class="avatar-icon">🤖</span>
+          <span class="online-indicator"></span>
+        </div>
+        <div class="profile-meta">
+          <div class="profile-name">KawanKuliner</div>
+          <div class="profile-status">Asisten Kuliner Denah Rasa</div>
+        </div>
+      </div>
+      <div class="widget-controls">
+        <button id="clear-btn" class="widget-btn-icon" title="Hapus Riwayat Chat" aria-label="Hapus Riwayat">
+          🗑️
+        </button>
+        <button id="minimize-btn" class="widget-btn-icon" title="Tutup Chat" aria-label="Tutup Chat">
+          ✕
+        </button>
+      </div>
+    </div>
+
+    <!-- Quick Suggestion Chips inside widget -->
+    <div class="widget-chips-bar">
+      <button class="chip-item" data-query="Rekomendasi kafe kopi enak dan tenang di Jakarta">☕ Kafe Jakarta</button>
+      <button class="chip-item" data-query="Rekomendasi makanan pedas legendaris di Bandung">🌶️ Pedas Bandung</button>
+      <button class="chip-item" data-query="Kuliner sarapan pagi paling ramai di Jogja">🥣 Sarapan Jogja</button>
+    </div>
+
+    <!-- Messages Body -->
+    <div id="chat-box" class="widget-chat-box"></div>
+
+    <!-- Chat Input Form -->
+    <form id="chat-form" class="widget-form">
+      <input 
+        type="text" 
+        id="user-input" 
+        placeholder="Tanya makanan, kafe, atau warung..." 
+        autocomplete="off" 
+        required 
+      />
+      <button type="submit" id="send-btn" class="widget-send-btn" aria-label="Kirim Pesan">
+        <span>➤</span>
+      </button>
+    </form>
+  </div>
+
+  <!-- Markdown parser and Sanitizer -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.2/dist/purify.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
